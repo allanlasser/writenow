@@ -47,7 +47,6 @@ Every prompt has a corresponding email address.
 
 A reply to an emailed prompt creates a **response**.
 The body of the email is used to create the response.
-Responses can be written in Markdown.
 
 ## Structure
 
