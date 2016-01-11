@@ -1,9 +1,12 @@
-* { margin: 0 0 1.6em 0; }
+* {
+    box-sizing: border-box;
+    margin: 0 0 1.6em 0;
+}
 
 body {
     margin-bottom: 0;
-    font-family: "Times New Roman", serif;
-    font-size: 18px;
+    font-family: "Courier Prime", "Times New Roman", serif;
+    font-size: 16px;
     line-height: 1.6em;
     background: #F6F6F6;
     color: #2B2B2B;
@@ -17,13 +20,22 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
+    padding: 1.6em;
     text-align: center;
+}
+
+h1, h2, .sans {
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
     font-size: 2em;
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-bottom: 1em;
+}
+
+p {
+    max-width: 24em;
 }
 
 a {
@@ -50,3 +62,50 @@ svg {
     fill: #DF5731;
     transition: fill .1s linear;
 }
+
+form {
+    border: 1px solid;
+    padding: 1.6em;
+    background: #FFFFFF;
+}
+
+label {
+    display: block;
+}
+
+input, button {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: .5em;
+    border: none;
+    border-bottom: 1px dotted;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+button {
+    border-bottom: none;
+    background: #DF5731;
+    color: #FFFFFF;
+}
+
+
+
+.mockup {
+    display: block;
+    margin-bottom: 0;
+    color: #F6F6F6;
+    background: #DF5731;
+    text-align: center;
+    font-size: 8em;
+    line-height: 2em;
+    font-weight: bold;
+    transition: background .1s linear;
+}
+
+.mockup:hover {
+    background: #F6F6F6;
+}
+
+
