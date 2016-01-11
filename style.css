@@ -5,7 +5,7 @@
 
 body {
     margin-bottom: 0;
-    font-family: "Courier Prime", "Times New Roman", serif;
+    font-family: "Courier Prime", "Courier", monospace;
     font-size: 16px;
     line-height: 1.6em;
     background: #F6F6F6;
@@ -24,8 +24,28 @@ body {
     text-align: center;
 }
 
-h1, h2, .sans {
+.cover svg {
+    width: 5em;
+    height: 5em;
+    margin-left: 15px;
+}
+
+h1, h2, .sans, .logo {
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.logo svg {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+}
+
+.logo .write {
+    color: #2B2B2B;
 }
 
 h1 {
@@ -34,7 +54,7 @@ h1 {
     margin-bottom: 1em;
 }
 
-p {
+.cover p {
     max-width: 24em;
 }
 
@@ -46,12 +66,6 @@ a {
 
 a:hover {
     color: #DF5731;
-}
-
-svg {
-    width: 5em;
-    height: 5em;
-    margin-left: 15px;
 }
 
 #icon-envelope {
@@ -90,22 +104,39 @@ button {
     color: #FFFFFF;
 }
 
-
-
-.mockup {
-    display: block;
-    margin-bottom: 0;
-    color: #F6F6F6;
-    background: #DF5731;
+header {
+    padding: 1em;
     text-align: center;
-    font-size: 8em;
-    line-height: 2em;
-    font-weight: bold;
-    transition: background .1s linear;
 }
 
-.mockup:hover {
-    background: #F6F6F6;
+footer {
+    text-align: center;
+    font-size: .8em;
 }
 
+footer p {
+    max-width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+}
 
+footer ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 1em;
+}
+
+article.about {
+    max-width: 40em;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+article.about h1 {
+    padding-bottom: 1em;
+    border-bottom: 1px dotted #73819E;
