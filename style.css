@@ -12,6 +12,13 @@ body {
     color: #2B2B2B;
 }
 
+@media all and (max-width: 440px) {
+    body {
+        font-size: 12px;
+        line-height: 1.4em;
+    }
+}
+
 .cover {
     min-width: 100vw;
     min-height: 100vh;
