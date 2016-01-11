@@ -30,21 +30,26 @@ It's a way for writers to respond to prompts and then see all the results in one
 
 So that's what this is and why it exists.
 
+## Goals
+
+1. Create a simple and straightforward system for collaborative writing.
+2. Use email as the primary interactive interface.
+3. Allow the system to be used _without_ registering for an account.
+4. Afford privacy, accessibility, and utility, while fostering community.
+
 ## Specification
 
 A **list** is a collection of members and a collection of prompts.
 Every list has a corresponding email address.
-
-A **writer** can belong to multiple lists.
-Writers are identified by their email.
-A writer is created once a new, unrecognized email is added to a list.
-If a writer has no responses and is not on any list, delete them.
+Writers can subscribe to lists by entering their email and a screen name.
+The screen name is used when identifying authorship of individual responses.
 
 A **prompt** is created by sending an email to the list's email address.
-If the sender is already a member on the mailing list, then the prompt is sent out to all members of the list.
+If the sender is a member on the list, then the prompt is sent out to all members of the list.
 Every prompt has a corresponding email address.
 
-A reply to an emailed prompt creates a **response**.
+A **response** is created by sending an email to the prompt's email address.
+If the sender is a member of the list, then their response is recorded.
 The body of the email is used to create the response.
 
 ## Structure
@@ -64,7 +69,7 @@ The body of the email is used to create the response.
         </tr>
         <tr>
             <td><code>lists/<b>list</b>/</code></td>
-            <td>Displays the mailing list's members and prompts</td>
+            <td>Displays the mailing list's prompts</td>
             <td>N/A</td>
         </tr>
         <tr>
@@ -90,16 +95,6 @@ The body of the email is used to create the response.
         <tr>
             <td><code>prompts/<b>prompt</b>/<b>response</b></code></td>
             <td>Displays a single response</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td><code>writers/</code></td>
-            <td>Lists all the writers</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td><code>writers/<b>writer</b>/</code></td>
-            <td>Lists that writer's responses and list memberships</td>
             <td>N/A</td>
         </tr>
     </tbody>
