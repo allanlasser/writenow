@@ -1,11 +1,8 @@
 # WriteNow
 
 [WriteNow][writenow] is a social writing application by [Allan Lasser][me].
-
 It's like newsletters, but backwards.
-
 Individually respond to writing prompts, then read everyone else's responses.
-
 It was conceived at the [CODEX Hackathon][codex] in 2016.
 
 ## Purpose
@@ -39,7 +36,9 @@ A **list** is a collection of members and a collection of prompts.
 Every list has a corresponding email address.
 
 A **writer** can belong to multiple lists.
+Writers are identified by their email.
 A writer is created once a new, unrecognized email is added to a list.
+If a writer has no responses and is not on any list, delete them.
 
 A **prompt** is created by sending an email to the list's email address.
 If the sender is already a member on the mailing list, then the prompt is sent out to all members of the list.
@@ -71,17 +70,17 @@ The body of the email is used to create the response.
         <tr>
             <td><code>lists/<b>list</b>/subscribe</code></td>
             <td>Displays a form for adding an email to the list</td>
-            <td>N/A</td>
+            <td>Adds email to the list</td>
         </tr>
         <tr>
             <td><code>lists/<b>list</b>/unsubscribe</code></td>
             <td>Displays a form for removing an email to the list</td>
-            <td>N/A</td>
+            <td>Removes email from the list</td>
         </tr>
         <tr>
             <td><code>prompts</code></td>
             <td>Displays all of the prompts</td>
-            <td>N/A</td>
+            <td>Creates a new prompt</td>
         </tr>
         <tr>
             <td><code>prompts/<b>prompt</b></code></td>
