@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from flask import Flask
-app = Flask(__name__)
+import flask
+app = flask.Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
+def index():
+    return flask.render_template('index.html')
+
+@app.route('/about')
+def about():
+    return flask.render_template('about.html')
 
 @app.route('/groups/')
 def group_list():
@@ -38,6 +42,8 @@ def response_detail(prompt_id, response_id):
         response_id,
         prompt_id
     )
+
+# flask.url_for('static', filename='style.css')
 
 if __name__ == '__main__':
     app.debug = True
