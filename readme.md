@@ -39,17 +39,17 @@ So that's what this is and why it exists.
 
 ## Specification
 
-A **list** is a collection of members and a collection of prompts.
-Every list has a corresponding email address.
-Writers can subscribe to lists by entering their email and a screen name.
+A **group** is a collection of members and a collection of prompts.
+Every group has a corresponding email address.
+Writers can join groups by entering their email and a screen name.
 The screen name is used when identifying authorship of individual responses.
 
-A **prompt** is created by sending an email to the list's email address.
-If the sender is a member on the list, then the prompt is sent out to all members of the list.
+A **prompt** is created by sending an email to the group's email address.
+If the sender is a member of the group, then the prompt is sent out to all members of the group.
 Every prompt has a corresponding email address.
 
 A **response** is created by sending an email to the prompt's email address.
-If the sender is a member of the list, then their response is recorded.
+If the sender is a member of the group, then their response is recorded.
 The body of the email is used to create the response.
 
 ## Structure
@@ -63,24 +63,24 @@ The body of the email is used to create the response.
         </tr>
     <tbody>
         <tr>
-            <td><code>lists/</code></td>
+            <td><code>groups/</code></td>
             <td>Displays all the mailing lists</td>
-            <td>Creates a new list</td>
+            <td>Creates a new group</td>
         </tr>
         <tr>
-            <td><code>lists/<b>list</b>/</code></td>
-            <td>Displays the mailing list's prompts</td>
+            <td><code>groups/<b>group</b>/</code></td>
+            <td>Displays the group's prompts</td>
             <td>N/A</td>
         </tr>
         <tr>
-            <td><code>lists/<b>list</b>/subscribe</code></td>
-            <td>Displays a form for adding an email to the list</td>
-            <td>Adds email to the list</td>
+            <td><code>groups/<b>group</b>/join</code></td>
+            <td>Displays a form for adding an email to the group</td>
+            <td>Adds email to the group</td>
         </tr>
         <tr>
-            <td><code>lists/<b>list</b>/unsubscribe</code></td>
-            <td>Displays a form for removing an email to the list</td>
-            <td>Removes email from the list</td>
+            <td><code>groups/<b>group</b>/leave</code></td>
+            <td>Displays a form for removing an email from the group</td>
+            <td>Removes email from the group</td>
         </tr>
         <tr>
             <td><code>prompts</code></td>
