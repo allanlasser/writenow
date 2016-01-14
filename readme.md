@@ -39,10 +39,12 @@ So that's what this is and why it exists.
 
 ## Specification
 
-A **group** is a collection of members and a collection of prompts.
+A **group** is a collection of authors and a collection of prompts.
 Every group has a corresponding email address.
-Writers can join groups by entering their email and a screen name.
-The screen name is used when identifying authorship of individual responses.
+
+An **author** can join any group by entering their email and a name.
+The email is kept private and only used by the system.
+The name is used to identify authorship of an individual response within a group.
 
 A **prompt** is created by sending an email to the group's email address.
 If the sender is a member of the group, then the prompt is sent out to all members of the group.
@@ -52,7 +54,7 @@ A **response** is created by sending an email to the prompt's email address.
 If the sender is a member of the group, then their response is recorded.
 The body of the email is used to create the response.
 
-## Structure
+### URL Structure
 
 <table>
     <thead>
@@ -64,12 +66,12 @@ The body of the email is used to create the response.
     <tbody>
         <tr>
             <td><code>groups/</code></td>
-            <td>Displays all the mailing lists</td>
+            <td>Displays all the writing groups</td>
             <td>Creates a new group</td>
         </tr>
         <tr>
             <td><code>groups/<b>group</b>/</code></td>
-            <td>Displays the group's prompts</td>
+            <td>Displays the group's prompts and authors</td>
             <td>N/A</td>
         </tr>
         <tr>
@@ -81,6 +83,11 @@ The body of the email is used to create the response.
             <td><code>groups/<b>group</b>/leave</code></td>
             <td>Displays a form for removing an email from the group</td>
             <td>Removes email from the group</td>
+        </tr>
+        <tr>
+            <td><code>groups/<b>group</b>/<b>author</b></code></td>
+            <td>Displays the author's responses within the group</td>
+            <td>N/A</td>
         </tr>
         <tr>
             <td><code>prompts</code></td>
@@ -99,6 +106,40 @@ The body of the email is used to create the response.
         </tr>
     </tbody>
 </table>
+
+### Data Structure
+
+```
+{
+    Group: {
+        id: Int,
+        name: String,
+        email: String,
+        authors: List[Author],
+        prompts: List[Prompt],
+    },
+    Author: {
+        id: Int,
+        name: String,
+        email: String
+    },
+    Prompt: {
+        id: Int,
+        date: Date,
+        email: String,
+        title: String,
+        body: String,
+        author: Writer
+    },
+    Reponse: {
+        id: Int,
+        date: Date,
+        title: String,
+        body: String,
+        author: Writer
+    }
+}
+```
 
 [writenow]: http://writenow.email/
 [codex]: http://codexhackathon.com/
