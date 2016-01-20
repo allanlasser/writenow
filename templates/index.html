@@ -1,41 +1,24 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8" />
-    <title>WriteNow</title>
-    <meta description="It’s like newsletters, but backwards." />
-    <meta author="Allan Lasser" />
-    <link rel="stylesheet" type="text/css" href="/static/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-<body>
-    <div class="cover">
-        <svg width="350px" height="250px" viewBox="0 0 350 250">
-            <title>WriteNow</title>
-            <desc>The WriteNow icon is an envelope marked with an unread badge.</desc>
-            <path d="M0,50 L300,50 L300,250 L0,250 L0,50 Z M21.7578125,70.6640625 L280.34375,70.5742188 L150,150 L21.7578125,70.6640625 Z M20,230 L20.0000001,90 L150,170 L279.585938,90 L279.585938,230 L20,230 Z" id="icon-envelope" fill-rule="evenodd"></path>
-            <circle id="icon-badge" cx="290" cy="60" r="50"></circle>
-        </svg>
-        <h1>Write<a href="https://vine.co/v/eIXejbQ2utM">Now</a></h1>
-        <p>It’s like newsletters, but backwards.</p>
-        <p>Individually respond to writing prompts, then read everyone else's responses.</p>
-        <form action="https://docs.google.com/forms/d/1fllwozw9ChsFKBfHP7VEmYIe7w-SSN7_dkGBAjhHb1M/formResponse" method="POST" id="ss-form" target="_self">
-            <label for="entry_2118907566">What is your email address?</label>
-            <input type="email" name="entry.2118907566" class="sans" id="entry_2118907566" value="" aria-label="What is your email address?  Please enter a valid email address." aria-required="true" required="" title="Please enter a valid email address." placeholder="enter your email">
-            <input type="hidden" name="draftResponse" value="[,,&quot;3351150543781736871&quot;]">
-            <input type="hidden" name="pageHistory" value="0">
-            <input type="hidden" name="fvv" value="0">
-            <input type="hidden" name="fbzx" value="3351150543781736871">
-            <button type="submit" name="submit" value="Submit">Submit</button>
-        </form>
-    </div>
-    <footer>
-        <p>Made by <a href="http://www.allanlasser.com">Allan Lasser</p>
-        <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="mailto:Allan Lasser <lasser.allan+writenow@gmail.com>">Contact</a></li>
-            <li><a href="https://github.com/allanlasser/writenow">GitHub</a></li>
-        </ul>
-    </footer>
-</body>
+{% extends "layout.html" %}
 
-
+{% block body %}
+<div class="cover">
+    <svg width="350px" height="250px" viewBox="0 0 350 250">
+        <title>WriteNow</title>
+        <desc>The WriteNow icon is an envelope marked with an unread badge.</desc>
+        <path d="M0,50 L300,50 L300,250 L0,250 L0,50 Z M21.7578125,70.6640625 L280.34375,70.5742188 L150,150 L21.7578125,70.6640625 Z M20,230 L20.0000001,90 L150,170 L279.585938,90 L279.585938,230 L20,230 Z" id="icon-envelope" fill-rule="evenodd"></path>
+        <circle id="icon-badge" cx="290" cy="60" r="50"></circle>
+    </svg>
+    <h1>Write<a href="https://vine.co/v/eIXejbQ2utM">Now</a></h1>
+    <p>It’s like newsletters, but backwards.</p>
+    <p>Individually respond to writing prompts, then read everyone else's responses.</p>
+    <form action="https://docs.google.com/forms/d/1fllwozw9ChsFKBfHP7VEmYIe7w-SSN7_dkGBAjhHb1M/formResponse" method="POST" id="ss-form" target="_self">
+        <label for="entry_2118907566">What is your email address?</label>
+        <input type="email" name="entry.2118907566" class="sans" id="entry_2118907566" value="" aria-label="What is your email address?  Please enter a valid email address." aria-required="true" required="" title="Please enter a valid email address." placeholder="enter your email">
+        <input type="hidden" name="draftResponse" value="[,,&quot;3351150543781736871&quot;]">
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fvv" value="0">
+        <input type="hidden" name="fbzx" value="3351150543781736871">
+        <button type="submit" name="submit" value="Submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
