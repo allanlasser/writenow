@@ -14,11 +14,15 @@ def about():
 
 @app.route('/groups/')
 def group_list():
-    return 'All the great groups!'
+    return flask.render_template('group/list.html')
+
+@app.route('/groups/create')
+def group_create():
+    return flask.render_template('group/create.html')
 
 @app.route('/groups/<int:group_id>/')
 def group_detail(group_id):
-    return 'This is the page for group %d.' % group_id
+    return flask.render_template('group/detail.html')
 
 @app.route('/groups/<int:group_id>/join')
 def group_join(group_id):
@@ -30,7 +34,7 @@ def group_leave(group_id):
 
 @app.route('/prompts/')
 def prompt_list():
-    return 'All the great prompts!'
+    return flask.render_template('prompt/list.html')
 
 @app.route('/prompts/<int:prompt_id>/')
 def prompt_detail(prompt_id):
