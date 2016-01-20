@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>WriteNow Groups</title>
+{% endblock %}
+
+{% block body %}
+<section class="group list">
+    <header>
+        <h1>Groups</h1>
+        <a class="sans" href="{{ url_for('group_create') }}" title="Create a new Group">Create a new Group</a>
+    </header>
+    <ul>
+        <li>
+            <div class="group-links">
+                <h2><a class="group-name sans" href="{{ url_for('group_detail', group_id=1) }}">Mock Group</a></h2>
+                <a class="group-join sans" href="{{ url_for('group_join', group_id=1) }}">Join</a>
+            </div>
+            <p class="group-description">This is a mocked group. It is mocked until I get a database set up.</p>
+        </li>
+    </ul>
+</section>
+{% endblock %}

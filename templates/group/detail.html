@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Mock Group</title>
+{% endblock %}
+
+{% block body %}
+<section class="group detail">
+    <header>
+        <h1>Mock Group</h1>
+        <a class="sans" href="{{ url_for('group_join', group_id=1) }}" title="Join this Group">Join this Group</a>
+    </header>
+</section>
+{% endblock %}
