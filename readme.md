@@ -41,6 +41,8 @@ So that's what this is and why it exists.
 
 A **group** is a collection of authors and a collection of prompts.
 Every group has a corresponding email address.
+When a group is created, it requires an initial author.
+If a group has no authors and no prompts, then it is deleted.
 
 An **author** can join any group by entering their email and a name.
 The email is kept private and only used by the system.
@@ -67,6 +69,11 @@ The body of the email is used to create the response.
         <tr>
             <td><code>groups/</code></td>
             <td>Displays all the writing groups</td>
+            <td>Creates a new group</td>
+        </tr>
+        <tr>
+            <td><code>groups/create</code></td>
+            <td>Displays form for creating a group</td>
             <td>Creates a new group</td>
         </tr>
         <tr>
