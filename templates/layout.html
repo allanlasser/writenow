@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <a href="{{ url_for('index') }}" title="WriteNow homepage" class="logo">
+        <a href="{{ url_for('routes.index') }}" title="WriteNow homepage" class="logo">
             <svg width="28px" height="20px" viewBox="0 0 350 250">
                 <title>WriteNow</title>
                 <desc>The WriteNow icon is an envelope marked with an unread badge.</desc>
@@ -19,14 +19,14 @@
             <span class="write">Write</span><span class="now">Now</span>
         </a>
         <ul class="sections">
-            <li class="group section"><a class="sans" href="{{ url_for('group_list') }}">Groups</a></li>
-            <li class="prompt section"><a class="sans" href="{{ url_for('prompt_list') }}">Prompts</a></li>
+            <li class="group section"><a class="sans" href="{{ url_for('routes.group_list') }}">Groups</a></li>
+            <li class="prompt section"><a class="sans" href="{{ url_for('routes.prompt_list') }}">Prompts</a></li>
     </nav>
     {% block body %}{% endblock %}
     <footer>
         <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('routes.index') }}">Home</a></li>
+            <li><a href="{{ url_for('routes.about') }}">About</a></li>
             <li><a href="mailto:Allan Lasser <lasser.allan+writenow@gmail.com>">Contact</a></li>
             <li><a href="https://github.com/allanlasser/writenow">GitHub</a></li>
         </ul>
