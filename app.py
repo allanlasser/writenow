@@ -1,28 +1,29 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import flask
-app = flask.Flask(__name__)
+from flask import Flask, render_template
+
+app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return flask.render_template('index.html')
+    return render_template('index.html')
 
 @app.route('/about')
 def about():
-    return flask.render_template('about.html')
+    return render_template('about.html')
 
 @app.route('/groups/')
 def group_list():
-    return flask.render_template('group/list.html')
+    return render_template('group/list.html')
 
 @app.route('/groups/create')
 def group_create():
-    return flask.render_template('group/create.html')
+    return render_template('group/create.html')
 
 @app.route('/groups/<int:group_id>/')
 def group_detail(group_id):
-    return flask.render_template('group/detail.html')
+    return render_template('group/detail.html')
 
 @app.route('/groups/<int:group_id>/join')
 def group_join(group_id):
@@ -34,7 +35,7 @@ def group_leave(group_id):
 
 @app.route('/prompts/')
 def prompt_list():
-    return flask.render_template('prompt/list.html')
+    return render_template('prompt/list.html')
 
 @app.route('/prompts/<int:prompt_id>/')
 def prompt_detail(prompt_id):
@@ -46,8 +47,6 @@ def response_detail(prompt_id, response_id):
         response_id,
         prompt_id
     )
-
-# flask.url_for('static', filename='style.css')
 
 if __name__ == '__main__':
     app.debug = True
