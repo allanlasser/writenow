@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>WriteNow Prompts</title>
+{% endblock %}
+
+{% block body %}
+<section class="prompt list">
+    <header>
+        <h1>Prompts</h1>
+        <a class="sans" href="{{ url_for('group_list') }}" title="Group list">Join a writing Group</a>
+    </header>
+    <ul>
+        <li>
+            <h2><a href="{{ url_for('prompt_detail', prompt_id=1) }}">Mock Prompt</a></h2>
+        </li>
+        <li>
+            <h2><a href="{{ url_for('prompt_detail', prompt_id=2) }}">Mock Prompt</a></h2>
+        </li>
+        <li>
+            <h2><a href="{{ url_for('prompt_detail', prompt_id=3) }}">Mock Prompt</a></h2>
+        </li>
+    </ul>
+</section>
+{% endblock %}

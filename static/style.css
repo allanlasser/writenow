@@ -4,7 +4,9 @@
 }
 
 body {
-    margin-bottom: 0;
+    max-width: 40em;
+    margin: 0 auto 1.6em;
+    padding: 1.6em;
     font-family: "Courier Prime", "Courier", monospace;
     font-size: 16px;
     line-height: 1.6em;
@@ -20,12 +22,6 @@ body {
 }
 
 .cover {
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 0;
     padding: 1.6em;
     text-align: center;
@@ -39,12 +35,15 @@ body {
 
 h1, h2, .sans, .logo {
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 
 .logo {
+    margin-bottom: 0;
     font-size: 16px;
     line-height: 1.6em;
     font-weight: bold;
+
 }
 
 .logo svg {
@@ -61,10 +60,6 @@ h1 {
     font-size: 2em;
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-bottom: 1em;
-}
-
-.cover p {
-    max-width: 24em;
 }
 
 a {
@@ -84,12 +79,6 @@ a:hover {
 #icon-badge {
     fill: #DF5731;
     transition: fill .1s linear;
-}
-
-form {
-    border: 1px solid;
-    padding: 1.6em;
-    background: #FFFFFF;
 }
 
 label {
@@ -113,20 +102,26 @@ button {
     color: #FFFFFF;
 }
 
-header {
-    padding: 1em;
-    text-align: center;
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #73819E;
+}
+
+nav ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 1.6em;
 }
 
 footer {
     text-align: center;
     font-size: .8em;
-}
-
-footer p {
-    max-width: 100%;
-    margin-bottom: 0;
-    text-align: center;
 }
 
 footer ul {
@@ -140,12 +135,43 @@ footer li {
     padding: 1em;
 }
 
-article.about {
-    max-width: 40em;
-    padding: 1em;
-    margin: 0 auto;
+article, section, form {
+    margin: 0 auto 1.6em;
 }
 
-article.about h1 {
-    padding-bottom: 1em;
+form {
+    border: 1px solid;
+    padding: 1.6em;
+    background: #FFFFFF;
+}
+
+article header, section header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2em;
     border-bottom: 1px dotted #73819E;
+}
+
+.group-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.group-links a, .group-links h2 {
+    margin-bottom: 0;
+}
+
+.group-description {
+    font-size: .8em;
+}
+
+.list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list li {
+    margin-bottom: 2em;
+}

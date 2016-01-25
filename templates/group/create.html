@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Create a WriteNow Group</title>
+{% endblock %}
+
+{% block body %}
+<form method="post" class="group create">
+    <header>
+        <h1>Create a Group</h1>
+    </header>
+    <label for="group-name">Name</label>
+    <input type="text" id="group-name" />
+    <label for="group-description">Description</label>
+    <textarea id="group-description" placeholder="What is the focus of this group?"></textarea>
+    <button type="submit">Create</button>
+</form>
+{% endblock %}

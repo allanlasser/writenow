@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta description="It’s like newsletters, but backwards." />
+    {% block title %}<title>WriteNow</title>{% endblock %}
+    {% block author %}<meta author="Allan Lasser" />{% endblock %}
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}" title="WriteNow homepage" class="logo">
+            <svg width="28px" height="20px" viewBox="0 0 350 250">
+                <title>WriteNow</title>
+                <desc>The WriteNow icon is an envelope marked with an unread badge.</desc>
+                <path d="M0,50 L300,50 L300,250 L0,250 L0,50 Z M21.7578125,70.6640625 L280.34375,70.5742188 L150,150 L21.7578125,70.6640625 Z M20,230 L20.0000001,90 L150,170 L279.585938,90 L279.585938,230 L20,230 Z" id="icon-envelope" fill-rule="evenodd"></path>
+                <circle id="icon-badge" cx="290" cy="60" r="50"></circle>
+            </svg>
+            <span class="write">Write</span><span class="now">Now</span>
+        </a>
+        <ul class="sections">
+            <li class="group section"><a class="sans" href="{{ url_for('group_list') }}">Groups</a></li>
+            <li class="prompt section"><a class="sans" href="{{ url_for('prompt_list') }}">Prompts</a></li>
+    </nav>
+    {% block body %}{% endblock %}
+    <footer>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="mailto:Allan Lasser <lasser.allan+writenow@gmail.com>">Contact</a></li>
+            <li><a href="https://github.com/allanlasser/writenow">GitHub</a></li>
+        </ul>
+    </footer>
+</body>
