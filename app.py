@@ -8,12 +8,11 @@ import os
 from routes import routes
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config.from_object(os.environ['APP_SETTINGS'])
 
 app.register_blueprint(routes)
 
 db = SQLAlchemy(app)
 
 if __name__ == '__main__':
-    app.debug = True
     app.run()
